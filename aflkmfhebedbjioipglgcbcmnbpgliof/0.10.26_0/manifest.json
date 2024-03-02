@@ -1,0 +1,40 @@
+{
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js",
+      "type": "module"
+   },
+   "commands": {
+      "_execute_action": {
+         "suggested_key": {
+            "default": "Alt+Shift+B"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "exclude_globs": [ "*chrome-extension*" ],
+      "js": [ "contentScript.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "A next level crypto wallet for Solana and Ethereum",
+   "differential_fingerprint": "1.9eee3b766177a6835b75d660c86f2a579b7fa7e87e542114562ab0634e0650c9",
+   "icons": {
+      "16": "anchor.png",
+      "192": "anchor.png",
+      "512": "anchor.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgR3LabKosfq6rT0XsYzM3zAcv/t4vbhSkDs7GE8ZOpxLfUWl97HcYwA+HJqn5mwHhzTmMI96wne44mN7QXDNGiWmtanHilYESB9oTk5rfklDxhiyC+iRpImqcQ4G8F3cK0N8fPydXmFY/fUy4gwHfV3ySFMJNiGQOHC/40DP/k39pzT82kO93kBkY02JkWjjiKchhIHJujx9tSduTcLVyO08kqHU/cNChCnM6n7NXjlQ5jAeaPbQL+ikkdb3EYrJlaO0XBW4VAf+Et/AEsZmNENC8THxJc3WOCepLQ1h8iPdEXME4c+8mCk750aBaUikPp5/oaF4WSzgjDVeOP8e6wIDAQAB",
+   "manifest_version": 3,
+   "name": "Backpack",
+   "permissions": [ "alarms", "storage", "background" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.10.26",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "injected.js" ]
+   } ]
+}

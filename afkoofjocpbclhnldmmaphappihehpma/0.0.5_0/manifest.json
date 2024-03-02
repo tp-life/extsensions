@@ -1,0 +1,46 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon-128.png",
+         "16": "icon-16.png",
+         "48": "icon-48.png"
+      },
+      "default_popup": "index.html"
+   },
+   "background": {
+      "service_worker": "service.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "static/css/content.css" ],
+      "js": [ "static/js/content.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; worker-src 'self'",
+      "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+   },
+   "description": "Transfer Web2 private data to Web3 using zero knowledge proofs without disclosing any user privacy data.",
+   "externally_connectable": {
+      "matches": [ "*://*/*", "*://localhost/*", "*://demo.zkpass.org/*" ]
+   },
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "48": "icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArH6fBbtc4odFrRFa7td0wqNIXHaF1Sbtthryi1kuSYC2Lb3RUbL0vszAIeQEmbwQEcPX4n2uRfTk7hFUFaFCwJ2mRZPy72PIrEJWhlVWI4xjSBwnSuAPhFL6kfkIhGYQaorR7z+B/zGa7kJOwpeweJ+n58ysAxuryjU1dfLlagvGhXyGYAW0Ni1lCZA5UxLAM6w0egJnYdZa+HVGOwzMNAugHbo8P7DroPNBqmp9eit2EY+rvWgyIdSfjc5M80NI7QUEGUXZtgCmVIuaLMwtq7Mb6xE3kA9R+IOTizLCQUlNt85EKLkpwpzJxbK1IG3udNtrqq029geuCvoB57SXbQIDAQAB",
+   "manifest_version": 3,
+   "name": "zkPass TransGate",
+   "permissions": [ "activeTab", "tabs", "storage", "scripting", "webRequest" ],
+   "sandbox": {
+      "pages": [ "*://*/*" ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.5",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*/*" ],
+      "resources": [ "images/*", "fonts/*" ]
+   } ]
+}

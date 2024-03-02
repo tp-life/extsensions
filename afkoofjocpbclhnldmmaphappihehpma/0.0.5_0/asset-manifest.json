@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38247e0a.css",
+    "main.js": "/static/js/main.js",
+    "content.css": "/static/css/content.d262ec88.css",
+    "content.js": "/static/js/content.js",
+    "static/media/JetBrainsMono-ExtraBold.ttf": "/static/media/JetBrainsMono-ExtraBold..ttf",
+    "static/media/JetBrainsMono-Light.ttf": "/static/media/JetBrainsMono-Light..ttf",
+    "static/media/JetBrainsMono-Regular.ttf": "/static/media/JetBrainsMono-Regular..ttf",
+    "static/media/JetBrainsMono-Medium.ttf": "/static/media/JetBrainsMono-Medium..ttf",
+    "static/media/pageBanner.png": "/static/media/pageBanner..png",
+    "static/media/KHInterference-Regular.woff": "/static/media/KHInterference-Regular..woff",
+    "static/media/KHInterference-Light.woff": "/static/media/KHInterference-Light..woff",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.css",
+    "static/js/main.js",
+    "static/css/main.38247e0a.css"
+  ]
+}

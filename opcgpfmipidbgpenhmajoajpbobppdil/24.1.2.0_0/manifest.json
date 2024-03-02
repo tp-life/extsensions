@@ -1,0 +1,38 @@
+{
+   "action": {
+      "default_popup": "ui.html?type=popup"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content-script.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "default-src 'none'; object-src 'none'; connect-src *; font-src 'self'; img-src * data:; media-src *; script-src 'self'; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';"
+   },
+   "description": "A wallet for Sui",
+   "host_permissions": [ "http://127.0.0.1:5001/", "https://fullnode.devnet.sui.io/", "https://fullnode.staging.sui.io/" ],
+   "icons": {
+      "128": "manifest/icons/sui-icon-128.png",
+      "16": "manifest/icons/sui-icon-16.png",
+      "32": "manifest/icons/sui-icon-32.png",
+      "48": "manifest/icons/sui-icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqupBbiPoXVRjLfWw3JMfdeBl3u2lA5ykjcuAuQwVqY7O4uGRskZsfn/VP/lBTBYsTH+5TpwsS2/+/vz+kP5C1ov0R2gs+PdlySZcwCEqNwZhQfA8rIDIWtpWaGTVoTZ0mWTjoqoe8bP+pvPTtv0kwo6QaySaUrn5DXvD5qGcv4s77qo97cDwUO1llTA3XGkfU3ObJmzWgIb8b0bfQ8PCFuITG6vaIWiDDWamwrxkmu1Ga8M5FZQE4KyysDxiZKky0Y5K5mcRMmfprgOZoxWMOGtUibxq/80B9LB5AWCZloDdZDN6GdCWEOH1kG0aIpvBi3hMn4Adwl+ygEuPI158bwIDAQAB",
+   "manifest_version": 3,
+   "name": "Sui Wallet",
+   "permissions": [ "storage", "tabs", "alarms", "unlimitedStorage", "identity" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "24.1.2.0",
+   "version_name": "24.1.2.0 (919e969)",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "dapp-interface.js" ]
+   }, {
+      "matches": [ "https://*.banxa.com/*" ],
+      "resources": [ "ui.html" ]
+   } ]
+}
